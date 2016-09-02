@@ -1,82 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
     <title>Ebook-template by akosma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <section class="page-header">
+      <h1 class="project-name">Ebook-template</h1>
+      <h2 class="project-tagline">Template to create PDF, ePub and Kindle books with Asciidoc and dblatex</h2>
+      <a href="https://github.com/akosma/eBook-Template" class="btn">View on GitHub</a>
+      <a href="https://github.com/akosma/eBook-Template/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/akosma/eBook-Template/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <header>
-          <h1>Ebook-template</h1>
-          <h2>Template to create PDF, ePub and Kindle books with Asciidoc and dblatex</h2>
-        </header>
+    <section class="main-content">
+      <h1>
+<a id="template-for-writing-an-ebook" class="anchor" href="#template-for-writing-an-ebook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Template for Writing an eBook</h1>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/akosma/eBook-Template/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/akosma/eBook-Template/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/akosma/eBook-Template" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
-<a id="template-for-writing-an-ebook" class="anchor" href="#template-for-writing-an-ebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template for Writing an eBook</h1>
-
-<p>This project contains a template used to write eBooks using
-<a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a>, Git, and any plain text editor in Mac OS X.</p>
-
-<p>The aim of the project is to provide a boilerplate used to generate
-eBooks in several formats on one operation:</p>
-
-<ul>
-<li>Self-contained HTML</li>
-<li>ePub</li>
-<li>PDF</li>
-<li>Kindle</li>
-</ul>
+<p>This is a new version of the classic template for eBooks.</p>
 
 <h2>
-<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h2>
+<a id="design-guidelines" class="anchor" href="#design-guidelines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Design Guidelines</h2>
 
 <p>Why using such a complex setup instead of just using a simpler tool like
 Word or Pages?</p>
 
 <ul>
-<li>The primary motivation of this template is versioning. Being able to
+<li>  The primary motivation of this template is versioning. Being able to
 use plain text files as input for the book brings the possibility of
-versioning each change individually using Git, Subversion or any other
-similar tool. This also opens up the door to collaboration among team
-members when editing a document.</li>
-<li>The second motivation is to separate the presentation and the layout
-of the final book from its contents. Other output file types could be
-added in the future.</li>
-<li>This also brings the possibility of using any text editor in just
+versioning each change individually using Git, Subversion or any
+other similar tool. This also opens up the door to collaboration
+among team members when editing a document.</li>
+<li>  The second motivation is to separate the presentation and the layout
+of the final book from its contents. Other output file types could
+be added in the future.</li>
+<li>  This also brings the possibility of using any text editor in just
 about any operating system; files are just plain text files that can
 be edited with gEdit, Notepad, Emacs, Vim, TextEdit, or any other
 similar tool.</li>
-<li>Markup languages like Markdown or Asciidoc (used in this template) are
-simpler and more readable than LaTeX or other SGML-like languages,
-making the files readable and lean even when edited in a text editor
-without any syntax highlighting or formatting support.</li>
-<li>Finally, being able to streamline the creation of the three versions
-of the book in just one command-line operation allows the whole setup
-to be automatized.</li>
+<li>  Markup languages like Markdown or Asciidoc (used in this template)
+are simpler and more readable than LaTeX or other SGML-like
+languages, making the files readable and lean even when edited in a
+text editor without any syntax highlighting or formatting support.</li>
+<li>  Finally, being able to streamline the creation of the three versions
+of the book in just one command-line operation allows the whole
+setup to be automatized.</li>
+</ul>
+
+<p>The choice of <a href="http://asciidoctor.org">Asciidoctor</a> comes from the
+following features:</p>
+
+<ul>
+<li>  Syntax highlighting of <a href="https://swift.org">Swift</a> code in all
+outputs (<a href="http://pandoc.org">Pandoc</a> does not support Swift at
+the moment.)</li>
+<li>  Multi-file projects (Pandoc, because of Markdown, does not support
+the <code>include</code> mechanism that AsciiDoc provides.)</li>
 </ul>
 
 <h2>
-<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span class="octicon octicon-link"></span></a>How it Works</h2>
+<a id="history" class="anchor" href="#history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>History</h2>
+
+<p>This toolkit started as a pure LaTeX workflow in 2009. In late 2011 the
+system moved to Markdown and it used Pandoc to generate the artifacts.
+In 2012 the choice was <a href="http://asciidoc.org">AsciiDoc</a>, and in 2016 this
+new system was finally developed, using AsciiDoctor.</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How To Use</h2>
 
 <p>The <code>master.asciidoc</code> file at the root of this project provides the
 guiding structure of the book. Chapters can be shuffled around,
@@ -85,88 +81,64 @@ independently of their contents or internal structure.</p>
 <p>Individual chapters are stored in the <code>chapters</code> folder, one file per
 chapter.</p>
 
-<p>Images are stored as PNG files in the <code>images</code> folder.</p>
+<p>Images are stored as PNG files in the <code>images</code> folder. Data files (XML,
+CSV, etc,) are located in the <code>data</code> folder.</p>
 
 <p>The Makefile creates a temporary <code>_build</code> folder, copies all the
 different elements in it (the master file, the chapters and the images)
 and commands the execution of the whole toolchain in order to get the
-final result.</p>
+final result:</p>
 
-<h2>
-<a id="software-requirements" class="anchor" href="#software-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Software Requirements</h2>
+<ul>
+<li>  Self-contained HTML5</li>
+<li>  PDF</li>
+<li>  EPUB3</li>
+<li>  Kindle (.mobi)</li>
+</ul>
 
-<p>Follow these instructions to install the required libraries in Mac OS X:</p>
+<p>UML diagrams are generated by text through
+<a href="http://plantuml.com">PlantUML</a>.</p>
 
 <ol>
-<li>Install <a href="http://brew.sh">Homebrew</a> if not already installed.
-
-<ul>
-<li>If already installed, remember to run <code>brew update; brew upgrade</code>.</li>
-</ul>
-</li>
-<li>Download and install <code>asciidoc</code> using Homebrew:
-
-<ul>
-<li><code>brew install asciidoc</code></li>
-</ul>
-</li>
-<li>Install source-highlight with Homebrew (this will install Boost 
-as a dependency):
-
-<ul>
-<li><code>brew install source-highlight</code></li>
-</ul>
-</li>
-<li>Install the <code>dblatex</code> package with Homebrew:
-
-<ul>
-<li><code>brew install dblatex</code></li>
-</ul>
-</li>
-<li>If the above command does not work, follow the instructions here:
-<code>https://gist.github.com/dustinschultz/6554087</code>
-</li>
-<li>Download the <a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000234621">kindlegen</a> tool and install it in the following
-path:
-
-<ul>
-<li><code>/Applications/KindleGen_Mac_i386_v2_7/kindlegen</code></li>
-</ul>
-</li>
-</ol>
-
-<h2>
-<a id="how-to-build-the-book-" class="anchor" href="#how-to-build-the-book-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to build the book </h2>
-
-<ol>
-<li>Make sure AsciiDoc and dblatex are properly installed.</li>
-<li>Execute the <code>make</code> command. This will create the PDF, ePub and HTML
+<li> Execute the <code>make</code> command. This will create the PDF, ePub and HTML
 versions of the book.</li>
-<li>
-<code>make pdf</code>, <code>make html</code>, <code>make epub</code> and <code>make kindle</code> each generate
+<li> <code>make pdf</code>, <code>make html</code>, <code>make epub</code> and <code>make kindle</code> each generate
 the specified version of the booklet.</li>
-<li>
-<code>make clean</code> removes the <code>_build</code> folder.</li>
+<li> <code>make clean</code> removes the <code>_build</code> folder.</li>
 </ol>
-
-<p>The .mobi (Amazon Kindle) version requires the <a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000234621">kindlegen</a> tool.</p>
 
 <p>After the build process completes, the compiled eBooks will be available
 at the <code>_build</code> subfolder.</p>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>Before using this template, make sure to have Homebrew and Rubygems
+installed, then run the following commands to install the required
+dependencies:</p>
+
+<pre><code>$ brew install plantuml
+$ gem install pygments.rb
+$ gem install kindlegen
+$ gem install asciidoctor
+$ gem install asciidoctor-pdf --pre
+$ gem install asciidoctor-epub3 --pre
+$ gem install asciidoctor-diagram
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>See the LICENSE.md file.</p>
-        </section>
 
-        <footer>
-          Ebook-template is maintained by <a href="https://github.com/akosma">akosma</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/akosma/eBook-Template">Ebook-template</a> is maintained by <a href="https://github.com/akosma">akosma</a>.</span>
 
-        
-      </div>
-    </div>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
